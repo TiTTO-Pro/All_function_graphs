@@ -14,9 +14,10 @@ public class Main {
         System.out.print("Enter (a) -> ");       } - for graph 'y = ax ^ 2'
         int a = input.nextInt();                 }
         */
-        
+         
         new FrameSet(); // enter 'k' in (...) if u want launch 'y = k / x' graph, and add 'int k' in constructor FrameSet(...)
                         // similarly enter 'a' and etc.
+                        // if u wanna launch 'y = √x' graph, you don't need to change anything
 
     }
 }
