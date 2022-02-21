@@ -7,12 +7,20 @@ class FrameSet extends JFrame {
 
     final int HEIGHT = 1000;
     final int WIDTH = 1000;
+    // final int k; - remove the comment to start the graph 'y = k / x'
+    // final int a; - like ~k~ and etc.
 
-    public FrameSet() {
+    public FrameSet() // public FrameSet(int k) - 'y = k / x'
+                      // public FrameSet(int a) - 'y = ax ^ 2'
+                      // public FrameSet() - 'y = √x'
+    {
         this.setSize(WIDTH, HEIGHT);// general background
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setBackground(Color.BLACK);
         this.setVisible(true);
+        //this.k = k; - for 'y = k / x'
+        //this.a = a; - for 'y = ax ^ 2'
+        
     }
 
     public void paint(Graphics g) {
