@@ -5,7 +5,6 @@
                     (int) ((HEIGHT / 2) - (35 * (Math.sin(i)))),
                     (int) ((WIDTH / 2) + (35 * (i + 0.1))),
                     (int) ((HEIGHT / 2) - (35 * (Math.sin(i + 0.1))))
-
             );
             g2.drawLine((int) ((WIDTH / 2) - (35 * (i))),
                     (int) ((HEIGHT / 2) + (35 * (Math.sin(i)))),
