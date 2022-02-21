@@ -19,7 +19,8 @@ public class Main {
                         // similarly enter 'a' and etc.
                         // if u wanna launch 'y = √x' graph, you don't need to change anything
         
-        // new FrameSet(k); - for 'y = k / x'
+        // new FrameSet(k); - 'y = k / x' - for example
+        // new FrameSet(); - 'y = sin(x)'...
     }
 }
 
