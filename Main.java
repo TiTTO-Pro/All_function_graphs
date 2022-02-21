@@ -20,7 +20,6 @@ public class Main {
                         // if u wanna launch 'y = √x' graph, you don't need to change anything
         
         // new FrameSet(k); - for 'y = k / x'
-
     }
 }
 
