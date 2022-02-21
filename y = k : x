@@ -1,0 +1,35 @@
+        //---------------------y = k / x-----------------------------------
+
+        if(k > 0) {
+            for (double x = 0.1; x < 10; x += 0.1) {
+                g2.drawLine((int) ((WIDTH / 2) + (35 * x)),
+                        (int) ((HEIGHT / 2) - (35 * (k / x))),
+                        (int) ((WIDTH / 2) + (35 * (x + 0.1))),
+                        (int) ((HEIGHT / 2) - (35 * (k / (x + 0.1))))
+
+                );
+                g2.drawLine((int) ((WIDTH / 2) - (35 * x)),
+                        (int) ((HEIGHT / 2) + (35 * (k / x))),
+                        (int) ((WIDTH / 2) - (35 * (x + 0.1))),
+                        (int) ((HEIGHT / 2) + (35 * (k / (x + 0.1))))
+
+                );
+            }
+        }
+        else if(k < 0){
+            for (double x = 0.1; x < 10; x += 0.1) {
+                g2.drawLine((int) ((WIDTH / 2) + (35 * x)),
+                        (int) ((HEIGHT / 2) - (35 * (k / x))),
+                        (int) ((WIDTH / 2) + (35 * (x + 0.1))),
+                        (int) ((HEIGHT / 2) - (35 * (k / (x + 0.1))))
+
+                );
+                g2.drawLine((int) ((WIDTH / 2) - (35 * x)),
+                        (int) ((HEIGHT / 2) + (35 * (k / x))),
+                        (int) ((WIDTH / 2) - (35 * (x + 0.1))),
+                        (int) ((HEIGHT / 2) + (35 * (k / (x + 0.1))))
+
+                );
+            }
+
+        }
