@@ -31,7 +31,6 @@
                             (int) ((HEIGHT / 2) - (35 * (a * Math.pow(j, 2)))),
                             (WIDTH / 2) + (35 * (j + 1)),
                             (int) ((HEIGHT / 2) - (35 * (a * (Math.pow((j + 1), 2)))))
-
                     );
                 }
             }
