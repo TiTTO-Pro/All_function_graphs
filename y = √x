@@ -8,7 +8,6 @@
 
             );
         }
-
         for(int i = 0; i < 100; i ++){
             g2.drawLine((WIDTH / 2) - (35 * (i)),
                     (int) ((HEIGHT / 2) + (35 * (Math.sqrt(i)))),
