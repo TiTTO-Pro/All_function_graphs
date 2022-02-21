@@ -7,14 +7,12 @@ class FrameSet extends JFrame {
 
     final int HEIGHT = 1000;
     final int WIDTH = 1000;
-    final int k;
 
-    public FrameSet(int k) {
-        this.setSize(WIDTH, HEIGHT);// общий фон
+    public FrameSet() {
+        this.setSize(WIDTH, HEIGHT);// general background
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setBackground(Color.BLACK);
         this.setVisible(true);
-        this.k = k;
     }
 
     public void paint(Graphics g) {
@@ -22,7 +20,7 @@ class FrameSet extends JFrame {
         Font newFont = currentFont.deriveFont(currentFont.getSize() * 1.60F);
         g.setFont(newFont);
         //---
-        int UnitSegmentForX = 35;// еденичный отрезок
+        int UnitSegmentForX = 35;// Unit segment(35 pixels)
         int UnitSegmentForY = 35;
         int UnitSegmentForXOtriz = 35;
         int UnitSegmentForYOtriz = 35;
@@ -34,19 +32,19 @@ class FrameSet extends JFrame {
         g2.drawLine(WIDTH / 2, 0, WIDTH / 2, HEIGHT);// line y
         g2.drawString("0", HEIGHT / 2, WIDTH / 2);// location(0, 0)
 
-        for (int i = 1; i <= 13; i++) {// местоположение всех точек отн ОХ от 0 до 10
+        for (int i = 1; i <= 13; i++) {// the location of all points relative to ОХ from 1 until 13
             g2.drawString(String.valueOf(i), (HEIGHT / 2) + UnitSegmentForX, (WIDTH / 2));
             UnitSegmentForX += 35;
         }
-        for (int i = 1; i <= 13; i++) { //местоположение всех точек отн ОY от 0 до 10
+        for (int i = 1; i <= 13; i++) { // the location of all points relative to ОY from 1 until 13
             g2.drawString(String.valueOf(i), (HEIGHT / 2), (WIDTH / 2) - UnitSegmentForY);
             UnitSegmentForY += 35;
         }
-        for (int i = -1; i >= -13; i--) {// Отн X от -1 до -10
+        for (int i = -1; i >= -13; i--) {// the location of all points relative to ОХ from -1 until -13
             g2.drawString(String.valueOf(i), (HEIGHT / 2) - UnitSegmentForXOtriz, WIDTH / 2);
             UnitSegmentForXOtriz += 35;
         }
-        for (int i = -1; i >= -13; i--) {//Отн Y от -1 до -10
+        for (int i = -1; i >= -13; i--) {// the location of all points relative to ОY from -1 until -13
             g2.drawString(String.valueOf(i), (HEIGHT / 2), (WIDTH / 2) + UnitSegmentForYOtriz);
             UnitSegmentForYOtriz += 35;
         }
@@ -67,46 +65,15 @@ class FrameSet extends JFrame {
             g2.drawLine(0, y, W, y);
         }
         g2.setColor(c); // restore color
+        
+        g2.setStroke(new BasicStroke(3));
+        g2.setColor(new Color(115, 9, 9));
 
-        //---------------------------y = ax^2-----------------------------↓
+        //---------------↓-----------Insert the code here(y = ax^2 and etc)------------------------↓
+        
+        
+        //---------------|------------------------End----------------------------------------------|
 
-        if(a < 0){
-            for(int i = 0; i < 10; i++){
-                g2.drawLine((WIDTH / 2) - (35 * (i)),
-                        (int) ((HEIGHT / 2) - (35 * (a * Math.pow(i, 2)))),
-                        (WIDTH / 2) - (35 * (i + 1)),
-                        (int) ((HEIGHT / 2) - (35 * (a * (Math.pow((i + 1), 2)))))
-
-                );
-                for(int j = 0; j > -10; j--){
-                    g2.drawLine((WIDTH / 2) - (35 * (j)),
-                            (int) ((HEIGHT / 2) - (35 * (a * Math.pow(j, 2)))),
-                            (WIDTH / 2) - (35 * (j + 1)),
-                            (int) ((HEIGHT / 2) - (35 * (a * (Math.pow((j + 1), 2)))))
-
-                    );
-                }
-            }
-        }
-        else if(a > 0){
-            for(int i = 0; i < 10; i++){
-                g2.drawLine((WIDTH / 2) + (35 * (i)),
-                        (int) ((HEIGHT / 2) - (35 * (a * Math.pow(i, 2)))),
-                        (WIDTH / 2) + (35 * (i + 1)),
-                        (int) ((HEIGHT / 2) - (35 * (a * (Math.pow((i + 1), 2)))))
-
-                );
-                for(int j = 0; j > -10; j--){
-                    g2.drawLine((WIDTH / 2) + (35 * (j)),
-                            (int) ((HEIGHT / 2) - (35 * (a * Math.pow(j, 2)))),
-                            (WIDTH / 2) + (35 * (j + 1)),
-                            (int) ((HEIGHT / 2) - (35 * (a * (Math.pow((j + 1), 2)))))
-
-                    );
-                }
-            }
-
-        }
 
 
     }
