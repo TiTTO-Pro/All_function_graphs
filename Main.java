@@ -18,6 +18,8 @@ public class Main {
         new FrameSet(); // enter 'k' in (...) if u want launch 'y = k / x' graph, and add 'int k' in constructor FrameSet(...)
                         // similarly enter 'a' and etc.
                         // if u wanna launch 'y = √x' graph, you don't need to change anything
+        
+        // new FrameSet(k); - for 'y = k / x'
 
     }
 }
